@@ -1,0 +1,857 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+}
+
+
+.cover {
+  height: 100vh;
+  max-width: 430px;
+  background-image: url("Group 16.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  transition: opacity 0.6s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cover:hover {
+  opacity: 0.95;
+}
+
+@keyframes bingkaiAnimasi {
+  0% {
+    transform: scale(0.7) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) rotate(-3deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes goyangAnimasi {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.bingkai {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 auto;
+  top: -190px;
+  fill: #ECDFCC;
+  animation: bingkaiAnimasi 1.5s ease-in-out forwards, goyangAnimasi 2s ease-in-out infinite; /* Durasi goyang lebih lama */
+}
+
+
+
+.content {
+  position: relative;
+  bottom: -120px;
+  text-align: center;
+  align-items: center;
+  color: #ECDFCC;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.content:hover {
+  transform: translateY(-10px);
+  opacity: 0.9;
+}
+
+.content h3 {
+  font-size: 20px;
+  font-family: 'Lustria';
+  margin-top: 30%;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.content h2 {
+  font-size: 60px;
+  font-family: 'Lobster Two';
+  margin: auto;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.content h4 {
+  font-size: 20px;
+  font-family: 'Lustria';
+  margin-top: 10px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.content h3:hover, .content h2:hover, .content h4:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+
+.container {
+  margin: 30px auto;
+  border: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ECDFCC;
+  bottom: -40px;
+  position: relative;
+  width: 340px;
+  height: 193px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #181C14;
+  color: #ECDFCC;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.container:hover {
+  box-shadow: 0 0 15px #ECDFCC;
+  transform: scale(1.02);
+}
+
+.container h5 {
+  font-size: 15px;
+  font-family: 'Lustria';
+  margin: 20px 0 10px;
+}
+
+.container p {
+  font-size: 15px;
+  font-family: 'Lustria';
+  margin: 10px 0 20px;
+}
+
+.container .garis {
+  margin: 0 0 20px;
+  width: 290px;
+  background-color: #ECDFCC;
+  transition: width 0.3s ease;
+}
+
+.container .garis:hover {
+  width: 310px;
+}
+
+a {
+  display: flex;
+  width: 196px;
+  height: 40px;
+}
+
+.container button {
+  margin: auto;
+  border: 2px solid #ECDFCC;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Lustria';
+  font-weight: bold;
+  width: 196px;
+  height: 40px;
+  background-color: transparent;
+  color: #ECDFCC;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;;
+}
+
+.container button:hover {
+  background-color:#ECDFCC ;
+  color: #181C14;
+  border: 0px;
+  transform: scale(1.05);
+}
+
+.container button:active {
+  animation: tombolAnimasi 0.5s forwards;
+}
+
+.bi-envelope-open {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin: 0 17px 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.bi-envelope-open:hover {
+  transform: rotate(20deg);
+}
+
+@keyframes tombolAnimasi {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mempelai {
+  height: auto;
+  max-width: 430px;
+  background-color: #181C14;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  color: #ECDFCC;
+}
+
+.groom img {
+  position: relative;
+  width: 200px;
+  height: 255px;
+  margin: 60px;
+  left: -50px;
+  top: 100px;
+  box-shadow: 0 0 20px #ECDFCC
+}
+
+.groom h2 {
+  position: relative;
+  font-family: 'Lobster Two';
+  font-size: 40px;
+  margin-top: -150px;
+  margin-left: 100px;
+  font-style: italic;
+}
+
+.groom p {
+  position: relative;
+  font-size: 20px;
+  font-family: 'Lustri';
+  margin:0;
+  margin-left: 90px;
+}
+
+.bride img {
+  position: relative;
+  width: 200px;
+  height: 255px;
+  margin: 80px;
+  left: 57px;
+  top: 30px; 
+  box-shadow: 0 0 20px #ECDFCC;
+}
+
+.bride h2 {
+  position: relative;
+  font-family: 'Lobster Two';
+  font-size: 40px;
+  margin-top: -140px;
+  margin-left: -100px;
+  font-style: italic;
+}
+
+.bride p {
+  position: relative;
+  font-size: 20px;
+  font-family: 'Lustri';
+  margin:0 auto;
+  left: -90px;
+}
+
+.ar-rum {
+  height: auto;
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+}
+
+.kotak-ar-rum {
+    background-color: #697565;
+    padding:10px auto;
+    border-radius: 10px;
+    color: #ECDFCC;
+    margin: 100px 30px;
+    width: 85%;
+    box-shadow: 0 0 20px #ECDFCC;
+}
+
+.garis-2 {
+  width: 100%;
+  background-color: #ECDFCC;
+  margin-bottom: 50px;
+}
+
+.acara {
+  height: auto;
+  max-width: 430px;
+  background-color: #181C14;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  color: #ECDFCC;
+}
+
+.coltdown p {
+  font-size: 16px;
+  text-align: left;
+  font-family: 'Lustria';
+  margin: 0 0 20px 20px ;
+}
+
+.coltdown h2 {
+  font-size: 39px;
+  font-family: 'Lobster Two';
+  text-align: left;
+  margin: 0 0 20px 20px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px 10px 0 10px
+}
+  
+  .countdown-unit {
+  flex: 1; 
+  margin: 0 10px;
+  padding: 0 0 5px;
+  box-shadow: 0 0 10px #ECDFCC;
+  border-radius: 10px;
+  background-color: #697565;
+  width: 48px;
+  height: 64px  ;
+  text-align: center;
+  }
+
+  .garis-3 {
+      width: 90%;
+      background-color: #ECDFCC;
+      margin: 30px 20px 0 20px;
+  }
+
+  .akad-nikah h3 {
+    font-size: 39px;
+    font-family: 'Lobster Two';
+    margin: 20px 0 20px;
+  }
+
+  .akad-nikah p {
+    font-size: 16px;
+    font-family: 'Lustria';
+    margin: 0 0 30px;
+    opacity: 0.4;
+  }
+
+  .akad-nikah h4 {
+    font-size: 20px;
+    font-family: 'Lobster Two';
+    margin: 0 0 20px;
+  }
+
+  .lokasi {
+    margin: 0 180px 0 0;
+    padding: auto;
+    background-color: #697565;
+    color: #ECDFCC;
+    height: 62px;
+    width: 136px;
+    justify-content: center;
+    box-shadow: 0 0 10px #ECDFCC;
+    border: none;
+  }
+
+  .lokasi p {
+    font-size: 20px;
+    font-family: 'Lobster Two';
+    margin: 0;
+  }
+
+  .kalender {
+    position: relative;
+    margin-left: 180px;
+    padding: auto;
+    background-color: #697565;
+    color: #ECDFCC;
+    height: 62px;
+    width: 136px;
+    justify-content: center;
+    box-shadow: 0 0 10px #ECDFCC;
+    border: none;
+    top: -62px;
+  }
+
+  .kalender p {
+    font-size: 20px;
+    font-family: 'Lobster Two';
+    margin: 0;
+  }
+
+  .resepsi h3 {
+    font-size: 39px;
+    font-family: 'Lobster Two';
+    margin: 60px 0 20px;
+  }
+
+  .resepsi p {
+    font-size: 16px;
+    font-family: 'Lustria';
+    margin: 0 0 30px;
+    opacity: 0.4;
+  }
+
+  .resepsi h4 {
+    font-size: 20px;
+    font-family: 'Lobster Two';
+    margin: 0 0 20px;
+  }
+
+  .lokasi-2 {
+    margin: 0 180px 0 0;
+    padding: auto;
+    background-color: #697565;
+    color: #ECDFCC;
+    height: 62px;
+    width: 136px;
+    justify-content: center;
+    box-shadow: 0 0 10px #ECDFCC;
+    border: none;
+  }
+
+  .lokasi-2 p {
+    font-size: 20px;
+    font-family: 'Lobster Two';
+    margin: 0;
+  }
+
+  .kalender-2 {
+    position: relative;
+    margin-left: 180px;
+    padding: auto;
+    background-color: #697565;
+    color: #ECDFCC;
+    height: 62px;
+    width: 136px;
+    justify-content: center;
+    box-shadow: 0 0 10px #ECDFCC;
+    border: none;
+    top: -62px;
+  }
+
+  .kalender-2 p {
+    font-size: 20px;
+    font-family: 'Lobster Two';
+    margin: 0;
+  }
+
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  height: 100vh;
+  max-width: 430px;
+  background-color: #181C14;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto; /* Mengatur margin agar section berada di tengah */
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  color: #ECDFCC;
+  padding: 20px; /* Tambahkan padding agar lebih rapi */
+}
+
+.gallery p {
+  font-size: 16px;
+  font-family: 'Lustria';
+  margin: 30px 0 10px;
+  text-align: left;
+}
+
+.gallery h2 {
+  font-size: 39px;
+  font-family: 'Lobster Two';
+  text-align: left;
+  margin: 0 0 30px;
+}
+
+/* Slider Container Styling */
+.slider-container {
+  margin: auto;
+  width: 320px;
+  height: 200px;
+  scrollbar-color: transparent transparent;
+  overflow-x: scroll; /* Mengizinkan scroll secara horizontal */
+  white-space: nowrap; /* Mencegah line break di antara gambar */
+  scroll-behavior: smooth; /* Menambahkan animasi scroll yang halus */
+  -webkit-overflow-scrolling: touch; /* Agar dapat di-swipe pada perangkat mobile */
+}
+
+/* Slider Gambar */
+.slider {
+  display: inline-block;
+}
+
+.slider img {
+  display: inline-block;
+  border-radius: 15px;
+  width: 320px; /* Lebar gambar */
+  height: 160px; /* Tinggi gambar */
+  object-fit: cover; /* Agar gambar tidak terdistorsi */
+  margin-right: 1%; /* Jarak antar gambar */
+}
+
+/* Box Kata Styling */
+.box-kata {
+width: 326px;
+height: 185px;
+background-color: rgba(105, 117, 101, 0.7);
+backdrop-filter: blur(10px); 
+color: #ECDFCC; 
+margin: 20px auto; 
+padding: 30px; 
+box-sizing: border-box;
+border-radius: 10px;
+text-align: center; 
+}
+
+.box-kata h3 {
+font-family: 'Lustria';
+font-size: 16px;
+margin-bottom: 30px;
+}
+
+.box-kata h2 {
+font-family: 'Lobster Two';
+font-size: 24px;
+margin: 10px 0 0 45px;
+}
+
+.rsvp {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 430px;
+  height: 100vh;
+  background: url('Group\ 16.png') no-repeat center center fixed;
+  background-size: cover; /* Pastikan background memenuhi seluruh elemen */
+}
+
+.form-container {
+  font-family: 'Lustria';
+  background-color: rgba(0, 0, 0, 0.4); /* Sedikit lebih transparan */
+  padding: 20px ;
+  margin: 0;
+  border-radius: 10px;
+  width: 298px;
+  height: 468px;
+  color: #ECDFCC;
+  backdrop-filter: blur(5px); /* Blur yang lebih kecil agar lebih halus */
+  box-shadow: 0px 0px 10px #ECDFCC; /* Menambah bayangan untuk efek visual */
+}
+
+.form-container h2 {
+  text-align: left;
+  font-size: 39px;
+  margin-bottom: 20px;
+  font-family: 'Lobster Two';
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-container input[type="text"], .form-container textarea {
+  padding: 10px;
+  margin-bottom: 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-container textarea {
+  resize: none;
+}
+
+.form-container button {
+  font-size: 20px;
+  font-family: 'Lustria';
+  box-shadow: 0 0 10px #ECDFCC;
+  padding: 10px;
+  margin: 10px;
+  background-color: #697565;
+  color: #ECDFCC;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container button:hover {
+  background-color: #181C14;
+}
+
+.gift {
+  margin: 0 auto;
+  padding: 0;
+  height: 200vh;
+  max-width: 430px;
+  background-color: #181C14;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  color: #ECDFCC;
+}
+
+.gift h1 {
+  position: relative;
+  font-size: 40px;
+  font-family: 'Lobster Two';
+  bottom: -50px;
+}
+
+.box {
+  width: 300px;
+  height: 285px;
+  background-color: #697565;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 40px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px #ECDFCC;
+}
+
+.box img {
+  width: 100px;
+  height: 70px;
+  margin-bottom: 0;
+}
+
+.box h4 {
+  font-size: 18px;
+  font-family: 'Lustria';
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.box button {
+  background-color: transparent;
+  color: #ECDFCC;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 3px solid #ECDFCC;
+  cursor: pointer;
+  width: 231px;
+  height: 56px;
+}
+
+.akhir {
+  max-width: 430px;
+  height: 100vh;
+  margin: auto;
+  padding: 0;
+  background-color: #181C14;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  color: #ECDFCC;
+}
+
+.garis-akhir {
+  margin: 0;
+  margin-bottom: 80px;
+}
+
+.penyambut {
+  font-size: 15px;
+  font-family: 'Lustria';
+  margin-bottom: 120px;
+}
+
+.keluarga-pria {
+  text-align: left;
+  margin-left:10px;
+  padding: 0;
+  position: relative;
+}
+
+.keluarga-pria h5 {
+  font-size: 12px;
+  font-family: 'Lustria';
+  margin-bottom: 5px;
+}
+
+.keluarga-pria h2 {
+  font-size: 39px;
+  font-family: 'Lobster Two';
+  margin-bottom: 5px;
+  margin-left: -5px;
+}
+
+.keluarga-pria h4 {
+  font-size: 12px;
+  font-family: 'Lustria';
+  margin-bottom: 10px;
+}
+
+.keluarga-perempuan {
+  text-align: right;
+  /* margin-top: -40px; */
+  margin-right: 10px;
+  position: relative;
+  top: -98px;
+}
+
+.keluarga-perempuan h5 {
+  font-size: 12px;
+  font-family: 'Lustria';
+  margin-bottom: 5px;
+}
+
+.keluarga-perempuan h2 {
+  font-size: 35px;
+  font-family: 'Lobster Two';
+  margin-bottom: 5px;
+  margin-right: -8px;
+}
+
+.keluarga-perempuan h4 {
+  font-size: 12px;
+  font-family: 'Lustria';
+  margin-bottom: 10px;
+}
+
+.penerima h4 {
+  font-size: 17px;
+  font-family: 'Lustria';
+  margin-top: 50px;
+  display: block;
+}
+
+.penerima p {
+  font-size: 17px;
+  font-family: 'Lustria';
+  display: block;
+  line-height: 1.9;
+}
+
+.navbar {
+  font-size: 12px;
+  font-family: 'Lustria';
+  color: #ECDFCC;
+  height: 70px;
+  max-width: 430px;
+  background-color: #697565;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  cursor: pointer;
+  margin: auto;
+  display: none;
+}
+
+.love-icon,
+.event-icon,
+.gallery-icon,
+.rsvp-icon,
+.gift-icon,
+img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 3px;
+}
+
+.love-icon,
+.event-icon,
+.gallery-icon,
+.rsvp-icon,
+.gift-icon,
+p {
+  font-family: 'Lustria';
+  font-size: 13PX;
+}
+
+.gallery-icon p {
+  margin-left: -7px;
+}
+
+.event-icon p {
+  margin-left: -5px;
+}
+
+.rsvp-icon p {
+  margin-left: -3px;
+}

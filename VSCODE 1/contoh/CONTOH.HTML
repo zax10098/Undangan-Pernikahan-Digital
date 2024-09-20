@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cover {
+  height: 100vh;
+  max-width: 430px;
+  background-image: url("Group 16.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.content {
+  text-align: center;
+  align-items: center;
+  color: #ECDFCC;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0; /* Dimulai dari opacity 0 */
+  transform: translateY(20px); /* Dimulai sedikit di bawah */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Transisi untuk opacity dan posisi */
+}
+
+.content.active {
+  opacity: 1; /* Muncul dengan opacity penuh */
+  transform: translateY(0); /* Kembali ke posisi semula */
+}
+
+.content h3 {
+  font-size: 20px;
+  font-family: 'Lustria';
+  margin-top: 30%;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  font-size: 60px;
+  font-family: 'Lobster Two';
+  margin: auto;
+}
+
+.content h4 {
+  font-size: 20px;
+  font-family: 'Lustria';
+  margin-top: 10px;
+}
+
+.container {
+  margin: 30px auto;
+  border: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ECDFCC;
+  width: 340px;
+  height: 193px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #181C14;
+  color: #ECDFCC;
+  opacity: 0; /* Dimulai dari opacity 0 */
+  transform: translateY(20px); /* Dimulai sedikit di bawah */
+  transition: opacity 1s ease, transform 1s ease; /* Transisi untuk opacity dan posisi */
+}
+
+.container.active {
+  opacity: 1; /* Muncul dengan opacity penuh */
+  transform: translateY(0); /* Kembali ke posisi semula */
+}
+
+.container h5 {
+  font-size: 15px;
+  font-family: 'Lustria';
+  margin: 20px 0 10px;
+}
+
+.container p {
+  font-size: 15px;
+  font-family: 'Lustria';
+  margin: 10px 0 20px;
+}
+
+.container .garis {
+  margin: 0 0 20px;
+  width: 290px;
+  background-color: #ECDFCC;
+}
+
+a {
+  display: flex;
+  width: 196px;
+  height: 40px;
+}
+
+.container button {
+  margin: auto;
+  border: 2px solid #ECDFCC;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Lustria';
+  font-weight: bold;
+  width: 196px;
+  height: 40px;
+  background-color: transparent;
+  color: #ECDFCC;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container button:hover {
+  background-color:#ECDFCC ;
+  color: #181C14;
+  border: 0px;
+}
+
+.container button:active {
+  animation: tombolAnimasi 0.5s forwards;
+}
+
+.bi-envelope-open {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin: 0 17px 0 10px;
+}
+
+</style>
+<body>
+    <section class="cover">
+        <div class="content">
+          <h3>Undangan Pernikahan</h3>
+          <h2>Levi & Mirai</h2>
+          <h4>26 Agustus 202x</h4>
+        </div>
+        
+        <div class="container">
+          <h5>Kepada Yth. Bapak / Ibu / Saudara</h5>
+          <p>Tamu Undangan</p>
+          <hr class="garis">
+          <a>
+            <button onclick="bukaUndangan()">
+              <i class="bi bi-envelope-open"></i>Buka Undangan
+            </button>
+          </a> 
+        </div>
+      </section>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    // Hanya menambahkan transisi untuk teks mempelai dan kotak
+    document.querySelector(".content").classList.add("active");
+    document.querySelector(".container").classList.add("active");
+  }, 100); // Delay singkat agar smooth
+});
+
+function bukaUndangan() {
+  alert("Undangan dibuka!");
+}
+
+      </script>
+</body>
+</html>
